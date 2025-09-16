@@ -6,18 +6,20 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner S = new Scanner(System.in);
-        int x, y, N, LogAbc, x3, l,N2 = 0;
+        int x, y, N, LogAbc, x3,N2, x4 = 0;
+
         String abcd = "abcdefghijklmnñopqrstuvwxyz";
         String Text;
-        char[] Cesar = new char[27];
 
         System.out.println("Escribe el texto a cifrar");
         Text = S.nextLine();
 
         char[] abc = abcd.toCharArray();
         char[] Car = Text.toCharArray();
+
         x = Text.length();
         LogAbc = abcd.length();
+        char[] abc2 = new char[LogAbc];
         for(y = 0; y<x; y++){
             System.out.println(Car[y]);
         }
@@ -26,18 +28,25 @@ public class Main {
         System.out.println("Escribe el numero de cambio de posicion de letras: ");
         x3 = S.nextInt();
 
-        for(N = 0; N<LogAbc; N++){
-            System.out.println(abc[N]);
-            abc[N] = Cesar[N2 + x3];
-            Cesar[N2] = abc[N];
+        x4 = x4+x3;
+
+        System.out.println(x4);
+
+        try{
+            for(N = 0;N<LogAbc;N++){
+                abc[N] = abc2[x4];
+                x4 = x4+1;
+            }
+        }catch (Exception e){
+            System.out.println("Hola");
         }
-        for(int x4 = 0;x4<LogAbc;x4++){
-            System.out.println("letras: \n" + abc[x4]);
+        System.out.println("hola "+ abc[0]);
+        for(N2 = 0;N2<LogAbc;N2++){
+
+            System.out.println("hola "+ abc2[N2]);
+
         }
-        do{
-            l = 0;
-            System.out.println("Modificacion"+abc[l]);
-            l = l+1;
-        }while(l== LogAbc);
+        //Encriptacion
+
    }
 }

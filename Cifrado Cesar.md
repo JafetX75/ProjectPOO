@@ -10,4 +10,7 @@ Sabremos que la L = H, R = O, O = L, E = A
 
 Y este seria nuestro mensaje encriptado LROE.
 
+for(int x4 = 0;x4<LogAbc;x4++){
+System.out.println("letras: \n" + abc[x4]);
+}
 
