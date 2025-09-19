@@ -6,47 +6,40 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner S = new Scanner(System.in);
-        int x, y, N, LogAbc, x3,N2, x4 = 0;
-
+        int x4 = 0;
+        int y2 = 0;
+        int y3 = 0;
+        int y4 = 0;
         String abcd = "abcdefghijklmnñopqrstuvwxyz";
-        String Text;
-
         System.out.println("Escribe el texto a cifrar");
-        Text = S.nextLine();
-
+        String Text = S.nextLine();
+        char[] Car = new char[27];
         char[] abc = abcd.toCharArray();
-        char[] Car = Text.toCharArray();
-
-        x = Text.length();
-        LogAbc = abcd.length();
+        Car = Text.toCharArray();
+        int x = Text.length();
+        int LogAbc = abcd.length();
         char[] abc2 = new char[LogAbc];
-        for(y = 0; y<x; y++){
+
+        for(int y = 0; y < x; ++y) {
             System.out.println(Car[y]);
         }
 
-        //Cambio de position de palabras
         System.out.println("Escribe el numero de cambio de posicion de letras: ");
-        x3 = S.nextInt();
+        int x3 = S.nextInt();
+        y2 += x3;
+        System.out.println(y2);
 
-        x4 = x4+x3;
-
-        System.out.println(x4);
-
-        try{
-            for(N = 0;N<LogAbc;N++){
-                abc[N] = abc2[x4];
-                x4 = x4+1;
+        do {
+            if (abc[y3] == Car[x4]) {
+                System.out.println("Se a encontrado la primera letra letras creo : " + Car[x4] + "Con: " + abc[y3]);
+                y3 = 0;
+                ++x4;
+                ++y4;
+            } else {
+                System.out.println("NO se encontraron " + Car[x4] + abc[y3] + x4 + y3);
+                ++y3;
             }
-        }catch (Exception e){
-            System.out.println("Hola");
-        }
-        System.out.println("hola "+ abc[0]);
-        for(N2 = 0;N2<LogAbc;N2++){
-
-            System.out.println("hola "+ abc2[N2]);
-
-        }
-        //Encriptacion
+        } while(y4 <= 4);
 
    }
 }
