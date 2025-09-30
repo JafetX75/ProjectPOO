@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +10,7 @@ public class Main {
         int y4 = 0;
         int y5 = 0;
         int y6 = 0,y7 = 0;
+        String Men_Encri;
         String abcd = "abcdefghijklmnñopqrstuvwxyz";
         System.out.println("Escribe el texto a cifrar");
         String Text = S.nextLine();
@@ -57,5 +59,7 @@ public class Main {
         for(int y8 = 0; y8 < x; y8++){
             System.out.println("Mensaje encriptado correctamente: " + NewChar[y8]);
         }
+
+
     }
 }
