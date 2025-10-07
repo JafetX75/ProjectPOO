@@ -1,0 +1,26 @@
+public class Pila{
+   int[] pila;
+    int contador= 0, tamanio;
+
+  public pila (int tamanio){
+    this.tamanio = tamanio;
+    this.pila = new int[tamanio];
+    this.contador = 0;
+  }
+
+  public void push(int Valor){
+  pila[tamanio] = Valor;
+  this.tamanio++;
+  }
+  public void pull (){
+  int valor; 
+  this.valor--;
+  return pila[valor];
+  }
+  public void Mostrar(){
+  for(int i = 0; i < this.tamanio, i++){
+    Sysytem.out.println(i+ ":"+ pila[i]);
+    }
+  }
+}
+  
