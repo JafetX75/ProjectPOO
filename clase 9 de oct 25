@@ -1,0 +1,17 @@
+metodos de instancia vs metodos de clase
+
+public class cadenas{
+  public static invertir(String Cadena){
+    //codigo para invertir
+  }
+}
+////////////////////////////////////////////
+Main 
+public static void Main(String[] arg){
+  public class Main{
+  cadena.inertir("Texto x");  
+  }
+}
+
+Empezar a usar Static y aprender
+
