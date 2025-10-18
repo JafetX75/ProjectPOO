@@ -1,18 +1,26 @@
 import java.util.Scanner;
-
 public class Mensajes {
-    Scanner Entrada = new Scanner(System.in);
-    //atributos
-    private String Mensaje;
-    private int Numero;
 
-    public void Mensaje(){
-        System.out.println("Escribe el mensaje a cifrar: ");
-        Mensaje = Entrada.nextLine();
+    Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Escribe el numero de posicion");
-        Numero = Entrada.nextInt();
+    private String mensaje;
+    private int numeroPosicion;
 
-
+    public String getmensaje(){
+        return mensaje;
     }
+    public int getnumeroPosicion(){
+        return numeroPosicion;
+    }
+    public void datosMensaje(){
+        System.out.println("Ingrensa el mensaje a codificar: ");
+        mensaje = entrada.nextLine();
+
+
+        System.out.println("Ingrensa el numero de posicio a recorrer: ");
+        numeroPosicion = entrada.nextInt();
+    }
+
+
+
 }
