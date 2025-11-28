@@ -10,7 +10,7 @@ public class Estudiante {
     }
 
     public void mostrarMensajeBienvenida(){
-        System.out.println("Bienvenido: "+ nombre + " ID: "+ idEstudiante + " Tu calificacion Actual es: "+ calificacionActual+"%");
+        System.out.println("Bienvenido: "+ nombre + " ID: "+ idEstudiante + " Tu calificacion Acasdatual es: "+ calificacionActual+"%");
     }
     public boolean verificarSiAprobado(){
 
