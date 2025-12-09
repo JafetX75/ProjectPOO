@@ -27,7 +27,6 @@ public class ArregloBidimensional {
             }
         }
     }
-
         public void Renderizado(){
             for(int i = 0; i < altura; i++){
                 for (int y= 0;y<anchura; y++){
