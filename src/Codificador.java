@@ -1,23 +1,13 @@
 import java.util.Arrays;
 public class Codificador {
-<<<<<<< HEAD
     //Variables para guardar el mensaje y la distancia
     private String mensaje;
     private int numeroPosicion;
 
-    //constructor para guardar datos
-=======
-    Mensajes mnj = new Mensajes();
-
-    private String mensaje;
-    private int numeroPosicion;
-
->>>>>>> origin/master
     public Codificador(String mensaje, int numeroPosicion){
         this.mensaje = mensaje;
         this.numeroPosicion = numeroPosicion;
     }
-<<<<<<< HEAD
     //Metodo que elimina lo innecesario en el mensaje como (Espacios, tabs, etc)
     private static void eliminarCaracteres(){
 
@@ -56,8 +46,6 @@ public class Codificador {
                 //Si encontro la letra, este agarra el valor de el contarAbc y le suma el numero de posicion que elegimos para recorrer; para despues guardarlo en el array <-
                 //-> llamado codifiMen.
                 codifiMen[contaMen] = caracAbc[contaAbc + numeroPosicion];
-                System.out.println(codifiMen[contaMen]);
-                //System.out.println(caracAbc[contaAbc]);
 
                 //Reinicia el abc para que empiece desde a de nuevo
                 contaAbc = 0;
@@ -79,38 +67,4 @@ public class Codificador {
     public String getmensaje(){
         return Codificador();
     }
-
-=======
-    private String Codificador(){
-         int abcLongitud, menLongitud, contaMen = 0, contaAbc = 0;
-         String abcd = "abcdefghijklmnñopqrstuvwxyz";
-         char[] caracAbc;
-         char[] caracMen;
-
-        mensaje = mensaje.toLowerCase();
-        abcLongitud = abcd.length();
-        menLongitud = mensaje.length();
-        caracAbc =  abcd.toCharArray();
-        caracMen = mensaje.toCharArray();
-        char[] codifiMen = new char[menLongitud];
-
-
-        System.out.println();
-        do{
-            if(caracAbc[contaAbc] == caracMen[contaMen]){
-                codifiMen[contaMen] = caracAbc[contaAbc + numeroPosicion];
-
-                contaAbc = 0;
-                contaMen++;
-
-            }else{
-                contaAbc++;
-            }
-        }while(contaMen < menLongitud);
-        return Arrays.toString(codifiMen);
-    }
-    public String getmensaje(){
-        return Codificador();
-    }
->>>>>>> origin/master
 }
