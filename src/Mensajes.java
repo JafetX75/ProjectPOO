@@ -16,7 +16,6 @@ public class Mensajes {
         System.out.println("Ingrensa el mensaje a codificar: ");
         mensaje = entrada.nextLine();
 
-
         System.out.println("Ingrensa el numero de posicio a recorrer: ");
         numeroPosicion = entrada.nextInt();
     }
