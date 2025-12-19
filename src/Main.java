@@ -3,20 +3,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        ManejoArchivosTexto archivosTexto = new ManejoArchivosTexto();
-        ManejoArchivosBinarios archivosBinarios = new ManejoArchivosBinarios();
-
-        archivosTexto.leerArchivo("hola2.txt");
-        archivosTexto.escribirArchivo("hola2.txt", "hola mundo");
-
-
-        ObjetoX objx = new ObjetoX(1,Math.random(), "Nada");
-
-        archivosBinarios.writeObjectToFile(objx,"ArchivoBinario.bin");
-
-        ObjetoX obj2 = (ObjetoX) archivosBinarios.readObjectFromFile("ArchivoBinario.bin");
-        obj2.mostrarContenido();
-
         int num;
         String mn,mnCifrado;
         Mensajes Msj = new Mensajes();
@@ -31,7 +17,19 @@ public class Main {
 
         System.out.println(mnCifrado);
 
+        ManejoArchivosTexto archivosTexto = new ManejoArchivosTexto();
+        ManejoArchivosBinarios archivosBinarios = new ManejoArchivosBinarios();
 
+        archivosTexto.leerArchivo("mensajeEncriptado.txt");
+        archivosTexto.escribirArchivo("mensajeEncriptado.txt", mnCifrado);
 
+        ObjetoX objx = new ObjetoX(1,Math.random(), mnCifrado);
+        System.out.println("Este es el binario Escribir");
+
+        archivosBinarios.writeObjectToFile(objx,"ArchivoBinario.bin");
+
+        ObjetoX obj2 = (ObjetoX) archivosBinarios.readObjectFromFile("ArchivoBinario.bin");
+        System.out.println("Este es el binario read");
+        obj2.mostrarContenido();
     }
 }

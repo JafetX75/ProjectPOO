@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 
 public class Mensajes {
-
     Scanner entrada = new Scanner(System.in);
-
     private String mensaje;
     private int numeroPosicion;
 
@@ -18,7 +16,7 @@ public class Mensajes {
         System.out.println("Ingrensa el mensaje a codificar: ");
         mensaje = entrada.nextLine();
 
-        System.out.println("Ingrensa el numero de posicio a recorrer: ");
+        System.out.println("Ingrensa el numero de posicion a recorrer: ");
         numeroPosicion = entrada.nextInt();
     }
 
